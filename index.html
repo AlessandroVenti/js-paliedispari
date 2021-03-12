@@ -31,12 +31,12 @@
     <div id="lol"></div>
 
     <script type="text/javascript">
-    
+
 
                                              //Exercise 1  
     
 
-    function palindrome(word) {
+      function palindrome(word) {    
 
         var stringArray;
         var reverseCount;
@@ -50,23 +50,73 @@
 
         for (let i = 0; i < stringArray.length; i++) {
 
-            if (stringArray[i] === stringArray[reverseCount]) {
+          if (stringArray[i] === stringArray[reverseCount]) {
 
-                count += 1;
-                reverseCount -= 1;
+            count += 1;
+            reverseCount--;
 
-            } else {
+          } else {
+              
+              return alert("La parola non è palindroma!");
 
-                return alert("La parola non è palindroma!");
-            }
+          }
         }
 
         if (count === stringArray.length ) {
-            return alert("La parola è palindroma!");
-        }
-    }
 
-    palindrome(prompt("Inserisci un nome"));
+          return alert("La parola è palindroma!");
+
+        }
+     }
+
+      palindrome(prompt("Inserisci un nome").toLowerCase());
+
+
+                                             //Exercise 2  
+
+
+      // function chooseYourSide(element1, element2) {
+
+      //   var computerElement2 = Math.round(Math.random() * (5 -1) + 1);
+
+      //   console.log(element2, computerElement2);
+
+      //   var sum = 0;
+
+      //   sum = element2 + computerElement2;
+
+      //   console.log(sum);
+
+      //   if (sum % 2 == 0) {
+
+      //     if ( element1 === "pari") {
+
+      //       return alert("Il giocatore ha vinto! Somma: " + sum + " , Numero pari");
+
+      //     } else {
+
+      //         return alert("Il computer ha vinto! Somma: " + sum + " , Numero pari");
+      //     }
+
+      //   } else {
+
+      //     if (element1 === "pari" ) {
+
+      //       return alert("Il computer ha vinto! Somma: " + sum + " , Numero dispari");
+
+      //     } else {
+
+      //         return alert("Il giocatore ha vinto! Somma: " + sum + " , Numero dispari");
+
+      //     }
+      //   }
+      // }
+      
+
+      // chooseYourSide(prompt("Pari o dispari? Decidi!"), parseInt(prompt("Inserisci un numero")));
+
+
+
 
     </script>
   </body>
